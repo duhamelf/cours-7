@@ -35,3 +35,33 @@ df <- df[ , -1]
 
 df 
 ```
+
+## Tâche 3 et 4
+
+```{r}
+
+espece <- sum(!is.na(df$name))
+
+cas_complets <- complete.cases(df$name)
+df<- df[cas_complets, ]
+espece <- length(df_complets$name)
+
+```
+
+## Tâche 5
+
+```{r}
+
+dim(df)
+str(df)
+
+summary(df)
+
+x <- df[, "name"]
+y <- df[, "sleep_cycle"]
+df_cbind <- cbind(x, y)
+ 
+# mieux : 
+
+missing_a_lot <- df[ , c("name", "sleep_cycle")]
+```
