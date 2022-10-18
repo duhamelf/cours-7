@@ -14,7 +14,7 @@ df_2 <- read.csv(file = "data_2.csv")
 df_3 <- read.csv(file = "data_3.csv")
 df_4 <- read.csv(file = "data_4.csv")
 
-df_rbind <- rbind(df_1, df_2, df_3, df_4)
+df <- rbind(df_1, df_2, df_3, df_4)
 
 # ou bien ... 
 
@@ -22,9 +22,16 @@ file_list <- list.files(path = ".", pattern = "csv")
 
 dat <-  lapply(X = file_list, FUN = read.csv)
 
-df <- do.call(what = rbind, args = dat)
+df_machin <- do.call(what = rbind, args = dat)
 
-
+rm(df_1, df_2, df_3, df_4, df_machin)
 ```
 
-Tâche 2
+## Tâche 2
+
+```{r}
+
+df <- df[ , -1]
+
+df 
+```
